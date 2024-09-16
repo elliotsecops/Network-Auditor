@@ -20,6 +20,7 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
 
 - **Python 3.x**: Asegúrate de que Python 3.x está instalado en tu sistema.
 - **Librería Tabulate**: Instala la librería `tabulate` usando pip:
+
   ```bash
   pip install tabulate
   ```
@@ -31,6 +32,7 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
 ## Instalación
 
 1. Clona el repositorio en su máquina local:
+
 ```bash
    git clone https://github.com/elliotsecops/network-configuration-audit.git
    cd network-configuration-audit
@@ -43,6 +45,7 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
 ## Uso
 
 1. Ejecute el script con permisos de superusuario:
+
 ```bash
    sudo python3 network_audit.py
    ```
@@ -140,6 +143,7 @@ The Network Configuration Audit Tool is a Python script designed to audit and re
 
 - **Python 3.x**: Ensure Python 3.x is installed on your system.
 - **Tabulate Library**: Install the `tabulate` library using pip:
+
   ```bash
   pip install tabulate
   ```
@@ -151,12 +155,14 @@ The Network Configuration Audit Tool is a Python script designed to audit and re
 ## Installation
 
 1. Clone the repository to your local machine:
+
    ```bash
    git clone https://github.com/elliotsecops/network-configuration-audit.git
    cd network-configuration-audit
    ```
 
 2. Install the required Python package:
+
    ```bash
    pip install tabulate
    ```
@@ -164,6 +170,7 @@ The Network Configuration Audit Tool is a Python script designed to audit and re
 ## Usage
 
 1. Run the script with superuser permissions:
+
    ```bash
    sudo python3 network_audit.py
    ```
