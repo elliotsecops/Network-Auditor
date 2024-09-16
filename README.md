@@ -7,23 +7,23 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
 
 ## Características
 
-- Interfaces de red**: Lista todas las interfaces de red y su estado (activo/inactivo).
-- Direcciones IP**: Muestra las direcciones IP asignadas a cada interfaz de red.
-- Tabla de Enrutamiento**: Muestra la tabla de enrutamiento actual.
-- Reglas del cortafuegos**: Muestra las primeras reglas del cortafuegos (UFW).
-- Conexiones abiertas**: Lista algunas de las conexiones de red abiertas.
-- Menú Interactivo**: Proporciona un menú interactivo para facilitar la navegación y la selección de comprobaciones específicas.
-- Salida codificada por colores**: Mejora la legibilidad resaltando la información importante.
-- Registro**: Registra todas las acciones y errores en `audit_network.log` con fines de auditoría y depuración.
+- **Interfaces de red**: Lista todas las interfaces de red y su estado (activo/inactivo).
+- **Direcciones IP**: Muestra las direcciones IP asignadas a cada interfaz de red.
+- **Tabla de Enrutamiento**: Muestra la tabla de enrutamiento actual.
+- **Reglas del cortafuegos**: Muestra las primeras reglas del cortafuegos (UFW).
+- **Conexiones abiertas**: Lista algunas de las conexiones de red abiertas.
+- **Menú Interactivo**: Proporciona un menú interactivo para facilitar la navegación y la selección de comprobaciones específicas.
+- **Salida codificada por colores**: Mejora la legibilidad resaltando la información importante.
+- **Registro**: Registra todas las acciones y errores en `audit_network.log` con fines de auditoría y depuración.
 
 ## Requisitos previos
 
-- Python 3.x**: Asegúrate de que Python 3.x está instalado en tu sistema.
+- **Python 3.x**: Asegúrate de que Python 3.x está instalado en tu sistema.
 - **Librería Tabulate**: Instala la librería `tabulate` usando pip:
   ```bash
   pip install tabulate
   ```
-- Comandos del sistema**: El script requiere que los siguientes comandos estén disponibles en tu sistema:
+- **Comandos del sistema**: El script requiere que los siguientes comandos estén disponibles en tu sistema:
   - `ip`
   - `ss
   - `ufw` (para reglas de cortafuegos)
