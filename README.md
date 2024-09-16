@@ -44,10 +44,10 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
    ```
 ## Uso
 
-1. Ejecute el script con permisos de superusuario:
+1. Ejecute el script (con permisos de superusuario si es necesario):
 
 ```bash
-   sudo python3 network_audit.py
+   python network_audit.py
    ```
 2. El script presentará un menú interactivo. Elija la opción deseada para realizar comprobaciones específicas o ejecutar todas las comprobaciones secuencialmente.
 
@@ -169,10 +169,10 @@ The Network Configuration Audit Tool is a Python script designed to audit and re
 
 ## Usage
 
-1. Run the script with superuser permissions:
+1. Run the script:
 
    ```bash
-   sudo python3 network_audit.py
+   python network_audit.py
    ```
 
 2. The script will present an interactive menu. Choose the desired option to perform specific checks or run all checks sequentially.
