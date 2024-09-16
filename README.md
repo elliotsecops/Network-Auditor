@@ -34,8 +34,8 @@ Esta Herramienta de Auditoría de Configuración de Red es un script Python dise
 1. Clona el repositorio en su máquina local:
 
 ```bash
-   git clone https://github.com/elliotsecops/network-configuration-audit.git
-   cd network-configuration-audit
+   git clone https://github.com/elliotsecops/network-auditor.git
+   cd network-auditor
    ```
 2. Instale el paquete Python necesario:
 
@@ -157,8 +157,8 @@ The Network Configuration Audit Tool is a Python script designed to audit and re
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/elliotsecops/network-configuration-audit.git
-   cd network-configuration-audit
+   git clone git clone https://github.com/elliotsecops/network-auditor.git
+   cd network-auditor
    ```
 
 2. Install the required Python package:
