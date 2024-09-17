@@ -80,6 +80,41 @@ def list_open_connections():
     print(tabulate(table, headers=["State", "Local Address", "Remote Address"], tablefmt="grid"))
     logging.info("Open network connections listed")
 
+def list_docker_nets():
+    """Pytonizando el todo-poderoso bash: 
+        docker network ls | awk 'FNR>1{print "docker inspect "$2}' | sh | egrep "Name|IPv4"
+    """
+    print(f"\n{BLUE}Docker Networks:{NC}")
+    found = subprocess.run(['which', 'docker'])
+    if found.returncode != 0:
+        print(f"{RED}Docker not found.{NC}")
+        return
+    nets = execute_command(['docker', 'network','ls'])
+    table = []
+    for line in nets.splitlines()[1:]:
+        net = line.split()
+        if len(net) >= 4:
+            netname =  net[1]            
+            table.append([f"{GREEN}{netname}{NC}", f"",f"" ])
+            p1 = subprocess.Popen(['docker','inspect',netname], text=True, stdout=subprocess.PIPE)
+            p2 = subprocess.Popen(['egrep', 'Name|IPv4'], text=True,stdin=p1.stdout, stdout=subprocess.PIPE)            
+            stdout, _ = p2.communicate()
+            hostname=""
+            hostip=""
+            for host in stdout.splitlines()[1:]:
+                host = host.split(':')
+                if len(host)>=2:                    
+                    s=host[0].split('"')[1]  #limpio el string eliminando comilas, comas y espacios
+                    t=host[1].split('"')[1]
+                    if s == 'Name':
+                        hostname = t
+                    if s == 'IPv4Address':
+                        hostip = t
+                        table.append([f"", f"{YELLOW}{hostname}{NC}",f"{YELLOW}{hostip}{NC}" ])
+    print(tabulate(table, headers=["Network Name", "Host Name", "Host IP"], tablefmt="grid"))
+    logging.info("Docker network connections listed")
+
+
 def print_menu():
     print(f"\n{GREEN}Network Configuration Audit Menu:{NC}")
     print("1. List network interfaces")
