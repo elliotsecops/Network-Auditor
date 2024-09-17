@@ -114,7 +114,6 @@ def list_docker_nets():
     print(tabulate(table, headers=["Network Name", "Host Name", "Host IP"], tablefmt="grid"))
     logging.info("Docker network connections listed")
 
-
 def print_menu():
     print(f"\n{GREEN}Network Configuration Audit Menu:{NC}")
     print("1. List network interfaces")
@@ -122,8 +121,9 @@ def print_menu():
     print("3. Show routing table")
     print("4. Show firewall rules")
     print("5. List open network connections")
-    print("6. Run all checks")
-    print("7. Exit")
+    print("6. List Docker networks")  # Agregada la opción para listar redes de Docker
+    print("7. Run all checks")
+    print("8. Exit")
 
 def main():
     print(f"{GREEN}Network Configuration Audit{NC}")
@@ -144,12 +144,14 @@ def main():
         elif choice == "5":
             list_open_connections()
         elif choice == "6":
+            list_docker_nets()  # Agregada la llamada a la función list_docker_nets
+        elif choice == "7":
             list_interfaces()
             show_ip_addresses()
             show_routing_table()
             show_firewall_rules()
             list_open_connections()
-        elif choice == "7":
+        elif choice == "8":
             print(f"{GREEN}Exiting. Thank you for using the Network Configuration Audit tool.{NC}")
             break
         else:
